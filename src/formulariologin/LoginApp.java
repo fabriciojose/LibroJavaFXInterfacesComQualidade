@@ -45,23 +45,24 @@ public class LoginApp extends Application { // esta classe se estende a um appli
 
     private void initComponents() {
 
-        AnchorPane pane = new AnchorPane();             //  criar painel
+        pane = new AnchorPane();             //  criar painel
         pane.setPrefSize(400, 300);                      // double prefWidth double prefHeight
-       
-        TextField txtLogin = new TextField();          // cria caixa de texto
+        /*CSS*/ 
+        pane.setStyle("-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, blue 0%, silver 100%);");
+      
+        txtLogin = new TextField();          // cria caixa de texto
         txtLogin.setPromptText("Digite aqui seu login!");
 
-        PasswordField txtSenha = new PasswordField();   // cria caixa de senha
+        txtSenha = new PasswordField();   // cria caixa de senha
         txtSenha.setPromptText("Digite aqui sua senha!");
 
-        Button btnEntrar = new Button("Entrar");       // cria botão 
+        btnEntrar = new Button("Entrar");       // cria botão 
 
-        Button btnSair = new Button("Sair");           // cria botão
+        btnSair = new Button("Sair");           // cria botão
 
         pane.getChildren().addAll(txtLogin, txtSenha, btnEntrar, btnSair); // adicionar os componentes no painel
         
-        /*CSS*/ 
-        //pane.setStyle("-fx-brackground-color: black;");
+        
     }
 
     private void initLayout() {
