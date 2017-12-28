@@ -22,7 +22,7 @@ public class LoginApp extends Application { // esta classe se estende a um appli
 
        
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage)throws Exception {
         
         initComponents();
         initListeners();
@@ -47,8 +47,7 @@ public class LoginApp extends Application { // esta classe se estende a um appli
 
         AnchorPane pane = new AnchorPane();             //  criar painel
         pane.setPrefSize(400, 300);                      // double prefWidth double prefHeight
-        pane.setStyle("-fx-brackground-color: black;");
-        
+       
         TextField txtLogin = new TextField();          // cria caixa de texto
         txtLogin.setPromptText("Digite aqui seu login!");
 
@@ -60,7 +59,9 @@ public class LoginApp extends Application { // esta classe se estende a um appli
         Button btnSair = new Button("Sair");           // cria botão
 
         pane.getChildren().addAll(txtLogin, txtSenha, btnEntrar, btnSair); // adicionar os componentes no painel
-
+        
+        /*CSS*/ 
+        //pane.setStyle("-fx-brackground-color: black;");
     }
 
     private void initLayout() {
@@ -107,9 +108,6 @@ public class LoginApp extends Application { // esta classe se estende a um appli
         }
 
     }
-    
-    
-    
     
     public static void main(String[] args) {
         launch(args);
