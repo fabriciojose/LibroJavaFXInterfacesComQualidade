@@ -11,14 +11,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
-                                            // cria clase para visualizacao e controle
+                                                // cria clase para visualizacao e controle
 public class LoginApp extends Application { // esta classe se estende a um application, do javafx
 
-    private AnchorPane pane; // criar os componentes como variáveis globais
+    private AnchorPane pane;            // criar os componentes como variáveis globais
     private TextField txtLogin;
     private PasswordField txtSenha;
     private Button btnEntrar, btnSair;
-    private static Stage stage; // variável global stage
+    private static Stage stage;     // variável global stage
 
        
     @Override
@@ -27,16 +27,16 @@ public class LoginApp extends Application { // esta classe se estende a um appli
         initComponents();
         initListeners();
         
-        Scene scene = new Scene(pane);                  // cria a cena e passa o painel 'pane'
+        Scene scene = new Scene(pane);                      // cria a cena e passa o painel 'pane'
         stage.setScene(scene);                          // indica qual cena utilizar no Stage
         
-        stage.setResizable(false); // não maximizar a tela
-        stage.setTitle("Login - GolFX"); // título para a tela
+        stage.setResizable(false);                  // não maximizar a tela
+        stage.setTitle("Login - GolFX");        // título para a tela
         
         stage.show();    
         initLayout();
         
-        LoginApp.stage = stage; // indicar a variável global stage e seu método getter 
+        LoginApp.stage = stage;         // indicar a variável global stage e seu método getter 
     }
     
     public static Stage getStage() { //criar o getter da variável global stage
@@ -45,20 +45,20 @@ public class LoginApp extends Application { // esta classe se estende a um appli
 
     private void initComponents() {
 
-        pane = new AnchorPane();             //  criar painel
+        pane = new AnchorPane();                            //  criar painel
         pane.setPrefSize(400, 300);                      // double prefWidth double prefHeight
         /*CSS*/ 
         pane.setStyle("-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, blue 0%, silver 100%);");
       
-        txtLogin = new TextField();          // cria caixa de texto
+        txtLogin = new TextField();                 // cria caixa de texto
         txtLogin.setPromptText("Digite aqui seu login!");
 
-        txtSenha = new PasswordField();   // cria caixa de senha
+        txtSenha = new PasswordField();         // cria caixa de senha
         txtSenha.setPromptText("Digite aqui sua senha!");
 
-        btnEntrar = new Button("Entrar");       // cria botão 
+        btnEntrar = new Button("Entrar");      // cria botão 
 
-        btnSair = new Button("Sair");           // cria botão
+        btnSair = new Button("Sair");         // cria botão
 
         pane.getChildren().addAll(txtLogin, txtSenha, btnEntrar, btnSair); // adicionar os componentes no painel
         
